@@ -1,0 +1,16 @@
+<html>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'table.css' %}">
+    <body>
+        <table class="styled-table">
+            <thead>
+                <tr><th>Text</th><th>Start</th><th>End</th></tr>
+            </thead>
+            <tbody>
+                {% for i in res %}
+                        <tr><td>{{ i.text }}</td><td>{{ i.start }}</td><td>{{ i.end }}</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
